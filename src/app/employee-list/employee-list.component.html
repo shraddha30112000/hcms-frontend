@@ -1,0 +1,57 @@
+<p>employee-list works!</p>
+
+<table class="table table-dark">
+    <thead >
+      <tr>
+        <th scope="col">EMP ID#</th>
+        <th scope="col">FIRST NAME</th>
+        <th scope="col">LAST NAME</th>
+        <th scope="col">GENDER</th>
+        <th scope="col">DOB</th>
+        <th scope="col">EMAIL</th>
+        <th scope="col">PHONE</th>
+        <th scope="col">ADDRESS</th>
+        <th scope="col">NATIONAL ID</th>
+        <th scope="col">MARITAL STATUS</th>
+        <th scope="col">EMERGENCY_NAME</th>
+        <th scope="col">EMERGENCY_PHONE</th>
+        <th scope="col">POSITION</th>
+        <th scope="col">SKILLSET</th>
+        <th scope="col">START DATE</th>
+        <th scope="col">END DATE</th>
+        <th scope="col">SALARY</th>
+        <th scope="col">STATUS</th>
+        <th scope="col">ACCOUNT NUM</th>
+        <th scope="col">DEPARTMENT</th>
+        <th scope="col">MANAGER</th>
+        <th scope="col">ROLE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employees">
+        <td>{{ emp.employeeId }}</td>
+        <td>{{ emp.firstName }}</td>
+        <td>{{ emp.lastName }}</td>
+        <td>{{ emp.gender }}</td>
+        <td>{{ emp.dateOfBirth }}</td>
+        <td>{{ emp.email }}</td>
+        <td>{{ emp.phone }}</td>
+        <td>{{ emp.address }}</td>
+        <td>{{ emp.nationalId }}</td>
+        <td>{{ emp.maritalStatus }}</td>
+        <td>{{ emp.emergencyContactName }}</td>
+        <td>{{ emp.emergencyContactPhone }}</td>
+        <td>{{ emp.position }}</td>
+        <td>{{ emp.skillSet }}</td>
+        <td>{{ emp.employmentStartDate }}</td>
+        <td>{{ emp.employmentEndDate }}</td>
+        <td>{{ emp.salary }}</td>
+        <td>{{ emp.employmentStatus }}</td>
+        <td>{{ emp.bankAccountNumber }}</td>
+        <td>{{ emp.department?.departmentName }}</td>
+        <td>{{ emp.manager?.firstName }} {{ emp.manager?.lastName }}</td>
+        <td>{{ emp.role?.roleName }}</td>
+        
+      </tr>
+    </tbody>
+  </table>
